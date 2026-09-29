@@ -1,1 +1,24 @@
 round,slice,frame,object_ref,cell,what,why,severity,owner,rule_id,evidence,action,rules_version,note
+calib,C0,adasind_019560.jpg,L2+M2,LM_noR,SPURIOUS,E4_model_domain,P1,annotator,R03,Model tách rider thành box Pedestrian riêng tại (630;741)-(687;907) chồng lên Bike L1.,rework,v1.0.0,Lỗi rider phổ biến của model YOLO
+calib,C0,adasind_019560.jpg,L5+M5,LM_noR,SPURIOUS,E4_model_domain,P1,annotator,R03,Model tách rider thành Pedestrian tại (456;731)-(536;833) chồng lên Bike L4.,rework,v1.0.0,Tương tự L2
+calib,C0,adasind_019560.jpg,L6,L_only,SPURIOUS,E1_annotator_error,P2,annotator,R01,Box Bike thừa tại (328;778)-(390;849) không có đối tượng thực trong reference.,rework,v1.0.0,False positive do bóng xe
+calib,C0,adasind_019560.jpg,L7+R3,LRM,WRONG_CLASS,E2_guideline_gap,P1,guideline,R04,Model và draft gán Truck tại edge zone trong khi reference gán ThreeWheeler.,rework,v1.0.0,Méo quang sai rìa gây nhầm class
+calib,C0,adasind_019560.jpg,L8+R6,LRM,WRONG_CLASS,E2_guideline_gap,P1,guideline,R04,Gán nhầm Truck thay vì ThreeWheeler ở vùng mid zone.,rework,v1.0.0,ThreeWheeler nhầm với Truck
+calib,C0,adasind_019560.jpg,R5,R_only,MISSING,E4_model_domain,P1,ai_team,R01,Reference có ThreeWheeler tại (327;721)-(457;849) nhưng model và draft bỏ sót.,rework,v1.0.0,Model thiếu dữ liệu ThreeWheeler
+r1_craft,B4-edge,adasind_236370.jpg,L2,na,SPURIOUS,E1_annotator_error,P1,annotator,R03,Vẽ tách Pedestrian L2 tại (665;727)-(778;1008) đè lên Bike L1.,rework,v1.0.0,Vi phạm R03 luật rider
+r1_craft,B4-edge,adasind_258420.jpg,L4+R1,na,WRONG_CLASS,E2_guideline_gap,P1,guideline,R04,Draft gán Truck tại (8;797)-(68;874) vùng edge trong khi reference là ThreeWheeler R1.,rework,v1.0.0,Méo quang học rìa ảnh
+r1_craft,B4-edge,adasind_310008.jpg,L6+R1,na,WRONG_CLASS,E2_guideline_gap,P1,guideline,R04,Draft gán Truck L6 trong khi reference gán ThreeWheeler R1.,rework,v1.0.0,Cần guideline patch R11
+r1_craft,B4-edge,adasind_258420.jpg,L5,na,SPURIOUS,E1_annotator_error,P1,annotator,R03,Draft có box Pedestrian L5 trùng người lái Bike L3.,rework,v1.0.0,Rider R03
+r2_qa,B4-edge,adasind_236370.jpg,L2,L_only,SPURIOUS,,P1,qa,R03,QA phát hiện Pedestrian L2 trùng rider ngồi trên Bike L1 theo quy tắc R03.,rework,v1.0.0,QA cold review rule R03
+r2_qa,B4-edge,adasind_258420.jpg,L5,L_only,SPURIOUS,,P1,qa,R03,QA phát hiện Pedestrian L5 đè lên Bike L3 vi phạm quy tắc R03.,rework,v1.0.0,QA phát hiện vi phạm rider
+r2_qa,B4-edge,adasind_310008.jpg,L7,L_only,DUPLICATE,,P1,qa,R04,"QA phát hiện L7 (Bus) và L6 (Truck) trùng tọa độ tại (253;827), duplicate box.",rework,v1.0.0,QA phát hiện trùng box và sai class
+r3_diag,B4-edge,adasind_236370.jpg,L2+M2,LM_noR,SPURIOUS,E4_model_domain,P1,annotator,R03,Model và Learner cùng vẽ Pedestrian rider tách riêng; reference không có box rời.,rework,v1.0.0,Đã sửa trong rework annotations-v2
+r3_diag,B4-edge,adasind_258420.jpg,L3+M3,LM_noR,SPURIOUS,E4_model_domain,P1,annotator,R03,Model tạo box Bike lệch hình học so với reference.,rework,v1.0.0,Hiệu chỉnh box geometry
+r3_diag,B4-edge,adasind_258420.jpg,L4+M4,LM_noR,SPURIOUS,E2_guideline_gap,P1,guideline,R04,Model và learner gán Truck thay vì ThreeWheeler ở vùng rìa.,rework,v1.0.0,Sửa class theo guideline patch
+r3_diag,B4-edge,adasind_258420.jpg,L5+M5,LM_noR,SPURIOUS,E4_model_domain,P1,annotator,R03,Model tách Pedestrian rider trùng Bike L3.,rework,v1.0.0,Loại bỏ trong rework
+r3_diag,B4-edge,adasind_258420.jpg,L6+M6,LM_noR,SPURIOUS,E1_annotator_error,P2,annotator,R01,Box xe con Car L6 bị lệch biên độ bao quanh xe.,rework,v1.0.0,Căn chỉnh lại tight box
+r3_diag,B4-edge,adasind_258420.jpg,L7+M7,LM_noR,SPURIOUS,E1_annotator_error,P2,annotator,R01,Pedestrian L7 bị vẽ thừa ở khoảng cách xa dưới ngưỡng.,rework,v1.0.0,Xóa box thừa
+r3_diag,B4-edge,adasind_258420.jpg,L8+M8,LM_noR,SPURIOUS,E2_guideline_gap,P1,guideline,R04,Truck L8 tại center zone thực chất là ThreeWheeler lớn có mui.,rework,v1.0.0,Đã đổi nhãn ThreeWheeler
+r3_diag,B4-edge,adasind_258420.jpg,L10+M10,LM_noR,SPURIOUS,E4_model_domain,P1,annotator,R03,Rider bị tách thành Pedestrian L10 trùng Bike L9.,rework,v1.0.0,Quy tắc rider R03
+r3_diag,B4-edge,adasind_310008.jpg,L6+M6,LM_noR,WRONG_CLASS,E2_guideline_gap,P1,ai_team,R04,Đối tượng tại (253;827) bị model và draft nhận diện là Truck/Bus; reference là ThreeWheeler.,escalate,v1.0.0,Escalate theo ticket 30 và decision D02
+r3_diag,B4-edge,adasind_310008.jpg,R1,R_only,MISSING,E2_guideline_gap,P1,guideline,R04,ThreeWheeler R1 bị bỏ sót do gán nhầm sang Truck.,rework,v1.0.0,Bổ sung box ThreeWheeler trong rework
