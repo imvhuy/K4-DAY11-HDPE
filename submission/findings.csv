@@ -1,1 +1,4 @@
 round,slice,frame,object_ref,cell,what,why,severity,owner,rule_id,evidence,action,rules_version,note
+calib,C0,adasind_019560.jpg,L3+R3,na,WRONG_CLASS,E1_annotator_error,P1,annotator,R04,Xe ba banh o ria trai x=39..99 y=773..850 bi meo fisheye de nham Car,rework,v1.0.0,Hieu chuan C0: Thong nhat auto rickshaw la ThreeWheeler theo wk-03 khong gan Car
+calib,C0,adasind_019560.jpg,L1+R1,na,STRUCTURE,E1_annotator_error,P1,annotator,R03,Xe may giua duong x=595..730 y=739..911 co rider ngoi lai,keep_with_reason,v1.0.0,Hieu chuan C0: Nguoi lai ngoi tren xe hai banh tinh chung 1 box Bike theo wk-02 khong tach Pedestrian
+calib,C0,adasind_019560.jpg,ego_body,na,IGNORE_SCOPE,E1_annotator_error,P0,annotator,R06,Than xe ego xuat hien o day goc trai x=0..60 y=1100..1600,rework,v1.0.0,Hieu chuan C0: Ve polygon ignore_region reason=ego_body om than xe minh theo wk-04
