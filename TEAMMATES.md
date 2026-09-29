@@ -9,8 +9,7 @@
 - Slice chung lấy từ mode.json: B4-edge
 - Tên định danh vai A dùng cho --self: chien
 - Kênh trao đổi nội bộ: Discord / Zalo
-- Đại diện nộp (vai C): Khúc Việt Anh, 2A202602088
-- Commit chốt bài: [Cập nhật mã commit sau khi commit P6]
+- Commit chốt bài: `90051fc` (feat: complete P1-P6 workflow for role C)
 
 ## 2. Ba vai chính
 
