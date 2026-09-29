@@ -9,7 +9,7 @@
 - Slice chung lấy từ mode.json: B4-edge
 - Tên định danh vai A dùng cho --self: chien
 - Kênh trao đổi nội bộ: Discord / Zalo
-- Commit chốt bài: `90051fc` (feat: complete P1-P6 workflow for role C)
+- Commit chốt bài: `640ef08` (merge: integrate origin/main with DAY11-SVM360-FISHEYE-NHOM-CO-ANH.html, keep complete P1-P6 submission)
 
 ## 2. Ba vai chính
 
