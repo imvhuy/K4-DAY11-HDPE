@@ -1,6 +1,5 @@
 # Sensor context
 
-- TODO — Rig: mô tả ngắn xe/camera gắn ở đâu theo hiểu biết của bạn từ ảnh (ADASIND không kèm tài liệu rig chi
-  tiết, ghi theo quan sát).
-- TODO — `ego_body` nhìn thấy ở đâu trong frame (góc capo, gương, tay lái...).
-- TODO — Vòng kính (lens circle) nằm ở vị trí nào trong ảnh, chiếm khoảng bao nhiêu phần khung hình.
+- **Rig:** Quan sát từ ảnh cho thấy đây là một camera fisheye đơn (front fisheye) góc nhìn siêu rộng (~180°–190°) được gắn ở phần đầu/mũi xe ego, hướng thẳng về phía trước trong bối cảnh giao thông đô thị Ấn Độ (hệ thống giao thông tay lái nghịch, phương tiện di chuyển bên trái đường, mật độ xe máy và auto-rickshaw cao). Bộ dữ liệu ADASIND không cung cấp tài liệu kỹ thuật chi tiết về rig, tọa độ camera extrinsics hay ma trận calibration.
+- **`ego_body`:** Phần thân xe ego (chủ yếu là mép nắp capo, cản trước hoặc gương chiếu hậu) nhìn thấy rõ ở khu vực đáy khung hình trong phần lớn các frame (46/48 frame). Riêng hai frame ngoại lệ (`adasind_006840.jpg` và `adasind_271039.jpg`) không quan sát thấy thân xe ego ở đáy ảnh.
+- **Vòng kính (lens circle):** Vòng tròn thấu kính fisheye nằm ở trung tâm khung hình kích thước 1080 × 1920 px (tọa độ tâm cx ≈ 450–650, cy ≈ 890–1050), bán kính R ≈ 770–840 px. Do đường kính quang học của thấu kính lớn hơn chiều rộng 1080 px của ảnh nên hai cạnh bên (trái và phải) của vòng kính bị cắt cụt, để lại hai dải đen cong ngoài vành kính (`lens_border`) ở phía trên đỉnh và phía dưới đáy khung hình.
