@@ -1,9 +1,9 @@
 camera_id,slice_type,frames,risk,rationale
-front,normal,,TODO,TODO
-front,hard,,TODO,TODO
-rear,normal,,TODO,TODO
-rear,hard,,TODO,TODO
-left,normal,,TODO,TODO
-left,hard,,TODO,TODO
-right,normal,,TODO,TODO
-right,hard,,TODO,TODO
+front,normal,35,Bỏ sót phương tiện nhỏ (two-wheeler pedestrian) ở cự ly xa hoặc bị che khuất một phần trong dòng xe thông thường,Đại diện cho điều kiện vận hành phổ biến nhất khi xe di chuyển thẳng trên đường đô thị với mật độ giao thông tiêu chuẩn
+front,hard,25,Chói sáng đèn pha/ngược sáng biến dạng mép fisheye khi xe rẽ hoặc cắt đầu xe lẫn nhãn ThreeWheeler và Truck/Car,Tập trung vào các ca biên rủi ro cao va chạm trực diện và giao cắt phức tạp tại nút giao có nhiều phương tiện chuyển hướng
+rear,normal,25,Nhầm lẫn vạch kẻ đường rào chắn hoặc bóng cây với chướng ngại vật thấp phía sau xe,Kiểm tra nhận diện phương tiện và người đi bộ phía sau ở khoảng cách an toàn tiêu chuẩn khi xe vận hành bình thường
+rear,hard,20,Góc chết gần cản sau xe bám đuôi quá sát gây cắt biên mạnh (lens_border/ego_body) thiếu sáng ban đêm,Đánh giá khả năng phát hiện vật cản khi lùi xe và xử lý vật thể bị cắt cụt ở mép dưới thấu kính
+left,normal,25,Biến dạng hình học cực đại ở vùng ngoại vi (outer zone) ước lượng sai bounding box cho xe vượt,Đại diện cho quan sát sườn thông thường trong điều kiện đường đô thị có xe máy chạy song song
+left,hard,20,Người đi bộ/xe đạp băng ngang sát sườn xe lọt vào vùng chuyển tiếp seam giữa camera trước và hông chói lóa đèn đối diện,Đánh giá độ tin cậy của thuật toán tại vùng ghép mí (stitching seam) và biến dạng nén ép ở rìa thấu kính bên trái
+right,normal,25,Nhầm lẫn người đi bộ trên vỉa hè với người dưới lòng đường biến dạng mép đối tượng tĩnh,Kiểm soát các ca di chuyển sườn phải thông thường sát mép đường đô thị
+right,hard,25,Xe máy chen lấn điểm mù bên phụ khi rẽ phải vật thể bị che khuất bởi cột mốc/cây cối và mép gương chiếu hậu,Giao thông hỗn hợp bên phụ có nguy cơ va chạm rất cao cần tỷ trọng hard tương đương camera trước để huấn luyện model nhận diện điểm mù
