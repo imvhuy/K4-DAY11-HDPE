@@ -1,6 +1,6 @@
 # Sensor context
 
-- TODO — Rig: mô tả ngắn xe/camera gắn ở đâu theo hiểu biết của bạn từ ảnh (ADASIND không kèm tài liệu rig chi
-  tiết, ghi theo quan sát).
-- TODO — `ego_body` nhìn thấy ở đâu trong frame (góc capo, gương, tay lái...).
-- TODO — Vòng kính (lens circle) nằm ở vị trí nào trong ảnh, chiếm khoảng bao nhiêu phần khung hình.
+- **Rig:** Camera đơn mắt cá (single fisheye camera), được gắn hướng về phía trước (front-facing) ở khu vực đầu xe / nắp capo hoặc kính chắn gió, hơi chúi xuống mặt đường để quan sát các phương tiện phía trước và vùng cận đầu xe trong điều kiện giao thông hỗn hợp (dataset ADASIND). Không có tài liệu rig chi tiết hay thông số calibration đi kèm, ghi nhận thuần túy dựa trên quan sát ảnh thực tế.
+- **`ego_body`:** Xuất hiện ở phần đáy khung hình (mép dưới ảnh, thường nằm trong khoảng y > 1500 đến 1920), bao gồm phần rìa mui/nắp capo, cản trước hoặc thân xe ego. Thân xe ego xuất hiện trên 46/48 frame (trừ 2 frame `adasind_006840.jpg` và `adasind_271039.jpg` không thấy). Cần vẽ polygon `ignore_region` với attribute `reason="ego_body"` cho các vùng này.
+- **Vòng kính (lens circle):** Nằm ở trung tâm khung hình (tâm cx ≈ 450–610 px, cy ≈ 890–1020 px trên ảnh kích thước 1080×1920). Bán kính thấu kính r ≈ 770–830 px. Do đường kính vòng tròn (~1600 px) lớn hơn chiều rộng ảnh (1080 px), vòng kính bị cắt tràn qua hai cạnh trái/phải, để lại hai vành tối/đen ngoài vòng kính ở đỉnh và đáy ảnh (`lens_border`). Vùng nhìn thấy của thấu kính chiếm khoảng 75% – 85% diện tích khung hình.
+

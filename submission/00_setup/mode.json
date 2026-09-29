@@ -1,0 +1,19 @@
+{
+  "members": [
+    "anh",
+    "chien",
+    "huy"
+  ],
+  "assignments": {
+    "anh": "B2-dense",
+    "chien": "B4-edge",
+    "huy": "B2-center"
+  },
+  "self": "chien",
+  "slice": "B4-edge",
+  "degrade": [],
+  "current_slice": "C0",
+  "support_prefill": false,
+  "support_slice": "",
+  "prefill_box_ids": []
+}
